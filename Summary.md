@@ -8,3 +8,24 @@ Deploy,emt support a rollout satus and history. You can rollback to previous dep
 
 k create deploy [deployment-name] --image=[image-name]:[tag] --dry-run=client -o yaml > deploy.yaml
 
+
+
+## API Deprecations
+
+Display the k8s major and minor version
+kubectl version -o yaml
+
+
+Display all API Groups
+and versions for the cluster. sort by kind
+kubectl api-resources --sort-by=kind
+
+Display  the api group and versio nfor ingresses
+Kubectl explain ingresses
+
+Display available versions for the autoscaling API group
+k api-versions | grep autoscaling
+
+Display the preferred version for the autosysling API group
+
+List any alpha versions enabled on the cluster
